@@ -31,33 +31,40 @@ Initializing the classes/assigning values to my classes: Nothing went wrong ther
 # Testing all the methods in the Inventory/Product Class:
 
 Create products:
+
 product1 = Product(1, "Laptop", "Electronics", 999.99, 10)
 product2 = Product(2, "Desk Chair", "Furniture", 149.99, 20)
 
 Create inventory and add products:
+
 inventory = Inventory()
 inventory.add_product(product1)
 inventory.add_product(product2)
 
 Display initial stock levels:
+
 print("Initial Stock Levels:")
 inventory.get_product_info(1)
 inventory.get_product_info(2)
 
 Update stock levels:
+
 inventory.update_stock(1, 5)
 inventory.update_stock(2, 15)
 
 Display updated stock levels:
+
 print("\nUpdated Stock Levels:")
 inventory.get_product_info(1)
 inventory.get_product_info(2)
 
 Add a new product:
+
 product3 = Product(3, "Smartphone", "Electronics", 699.99, 30)
 inventory.add_product(product3)
 
 Display stock levels after adding a new product:
+
 print("\nStock Levels After Adding New Product:")
 inventory.get_product_info(1)
 inventory.get_product_info(2)
@@ -85,38 +92,46 @@ Overall, it went according to plan. All the testing print statements went throug
 
 # Testing all the methods in the Transaction/Store class:
     
-Create products
+Create products:
+
 product1 = Product(1, "Laptop", "Electronics", 999.99, 10)
 product2 = Product(2, "Desk Chair", "Furniture", 149.99, 20)
 
-Create inventory and add products
+Create inventory and add products:
+
 inventory = Inventory()
 inventory.add_product(product1)
 inventory.add_product(product2)
 
-Create a store and set its inventory
+Create a store and set its inventory:
+
 store = Store()
 store.inventory = inventory
 
-Display initial stock levels
+Display initial stock levels:
+
 print("Initial Stock Levels:")
 store.inventory.get_product_info(1)
 store.inventory.get_product_info(2)
 
-Make a purchase
+Make a purchase:
+
 print("\nMaking a Purchase:")
 store.purchase_products({1: 2, 2: 1})  # Purchase 2 laptops and 1 desk chair
 
-Display stock levels after the purchase
+Display stock levels after the purchase:
+
 print("\nStock Levels After Purchase:")
 store.inventory.get_product_info(1)
 store.inventory.get_product_info(2)
 
-Generate a report
+Generate a report:
+
 print("\nGenerating Report:")
 store.generate_report()
 
-Display help message
+Display help message:
+
 print("\nHelp Message:")
 store.help()
 
