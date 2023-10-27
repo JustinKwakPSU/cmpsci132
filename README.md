@@ -74,15 +74,18 @@ inventory.get_product_info(3)
 Successfully added this product!
 Successfully added this product!
 Initial Stock Levels:
+
 Product Information: Laptop (Electronics) - 10 in stock
 Product Information: Desk Chair (Furniture) - 20 in stock
 
 Updated Stock Levels:
+
 Product Information: Laptop (Electronics) - 5 in stock
 Product Information: Desk Chair (Furniture) - 15 in stock
 Successfully added this product!
 
 Stock Levels After Adding New Product:
+
 Product Information: Laptop (Electronics) - 5 in stock
 Product Information: Desk Chair (Furniture) - 15 in stock
 Product Information: Smartphone (Electronics) - 30 in stock
@@ -139,24 +142,29 @@ store.help()
 Successfully added this product!
 Successfully added this product!
 Initial Stock Levels:
+
 Product Information: Laptop (Electronics) - 10 in stock
 Product Information: Desk Chair (Furniture) - 20 in stock
 
 Making a Purchase:
+
 Product Information: Laptop (Electronics) - 10 in stock
 Product Information: Desk Chair (Furniture) - 20 in stock
 Thank you for your patronage!
 
 Stock Levels After Purchase:
+
 Product Information: Laptop (Electronics) - 8 in stock
 Product Information: Desk Chair (Furniture) - 19 in stock
 
 Generating Report:
+
 Current Stock Levels:
 Laptop (Electronics): 8 in stock
 Desk Chair (Furniture): 19 in stock
 
 Sales History:
+
 Transaction ID: 1
   Laptop (Electronics): 2
   Desk Chair (Furniture): 1
@@ -165,6 +173,7 @@ Transaction ID: 1
 Total Revenue: $2149.97
 
 Help Message:
+
 Use the following commands in the console to use our store correctly:
 
 To suggest a product you want, type a name for the product and set it equal
