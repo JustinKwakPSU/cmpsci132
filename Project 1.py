@@ -95,41 +95,13 @@ class Store:
         print('')
         print("To generate a report, type store.generate_report().")
 
-#Example usage
-    
-# Create products
-product1 = Product(1, "Laptop", "Electronics", 999.99, 10)
-product2 = Product(2, "Desk Chair", "Furniture", 149.99, 20)
-
 # Create inventory and add products
 inventory = Inventory()
-inventory.add_product(product1)
-inventory.add_product(product2)
-
 # Create a store and set its inventory
 store = Store()
 store.inventory = inventory
 
-# Display initial stock levels
-print("Initial Stock Levels:")
-store.inventory.get_product_info(1)
-store.inventory.get_product_info(2)
-
-# Make a purchase
-print("\nMaking a Purchase:")
-store.purchase_products({1: 2, 2: 1})  # Purchase 2 laptops and 1 desk chair
-
-# Display stock levels after the purchase
-print("\nStock Levels After Purchase:")
-store.inventory.get_product_info(1)
-store.inventory.get_product_info(2)
-
-# Generate a report
-print("\nGenerating Report:")
-store.generate_report()
-
-# Display help message
-print("\nHelp Message:")
-store.help()
+print("Welcome what would you like to purchase?")
+print("If you need help please type store.help()")
 
 
