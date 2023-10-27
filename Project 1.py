@@ -1,4 +1,5 @@
 class Product:
+    #For all the product's details
     def __init__(self, product_id, name, category, price, quantity_in_stock):
         self.product_id = product_id
         self.name = name
@@ -9,15 +10,14 @@ class Product:
 class Inventory:
     def __init__(self):
         self.products = []
-
+    #Just making this in case I need it
     def isEmpty(self):
         return not bool(self.products)
-    
+    #Adding a product
     def add_product(self, product):
         self.products.append(product)
         print("Successfully added this product!")
-
-    #Using this to update the stock, will make a new class so the interface is will only use one or two classes
+    #Updating the stock of an item
     def update_stock(self, product_id, new_quantity):
         for product in self.products:
             if product.product_id == product_id:
@@ -41,7 +41,7 @@ class Store:
     def __init__(self):
         self.inventory = Inventory()
         self.transactions = []
-
+    #Calling from the Inventory class(does the same thing)
     def add_product(self, product):
         self.inventory.add_product(product)
 
@@ -82,26 +82,62 @@ class Store:
         pass
 
     def help(self):
-        print("Use the following commands in the console to use our store correctly:")
         print('')
-        print("To suggest a product you want, type a name for the product and set it equal")
-        print("to (An ID number you want with this product, the name of this product, the")
-        print("type/category this product belongs to, the price, and the quantity you would like to stock.")
-        print("Then using the product you assinged previously type inventory.add_product(THE NAME OF THE PRODUCT ASSIGNED) and press enter!")
-        print("Note, please use a quotations mark around any words.")
-        print("Example usage: product1 = Product(1, Laptop, Electronics, 999.99, 10)")
+        print("To add a product to out empty store, please type: add_product")
         print('')
-        print("To make a purchase, type store.purchase_products(THE ID #: QUANTITY).")
+        print("To look at one product's information in particular, please type: get_info")
         print('')
-        print("To generate a report, type store.generate_report().")
+        print("To purchase a product, please type: purchase")
+        print('')
+        print("To pull a report of the items purchased, please type: report")
+        print('')
+        print("To exit our store, please type: exit")
+        
+    def run_interface(self):
+        print("Welcome to the Store Management System!")
+        
+        while True:
+            command = input("Enter a command (type 'help' for instructions): ").lower()
 
-# Create inventory and add products
+            if command == 'help':
+                self.help()
+            elif command == 'add_product':
+                product_id = int(input("Enter product ID: "))
+                name = input("Enter product name: ")
+                category = input("Enter product category: ")
+                price = float(input("Enter product price: "))
+                quantity = int(input("Enter quantity in stock: "))
+                product = Product(product_id, name, category, price, quantity)
+                self.add_product(product)
+            elif command == 'purchase':
+                products_and_quantities = {}
+                while True:
+                    product_id = input("Enter product ID to purchase (type 'done' when finished): ")
+                    if product_id.lower() == 'done':
+                        break
+                    quantity = int(input("Enter quantity to purchase: "))
+                    products_and_quantities[int(product_id)] = quantity
+                self.purchase_products(products_and_quantities)
+            elif command == 'report':
+                self.generate_report()
+            elif command == 'get_info':
+                product_id = int(input("Enter product ID to get information: "))
+                self.inventory.get_product_info(product_id)
+            elif command == 'exit':
+                print("Thank you for using the Store Management System. Goodbye!")
+                break
+            else:
+                print("Invalid command. Type 'help' for instructions.")
+                
+#Example usage
+
+# Create inventory 
 inventory = Inventory()
+
 # Create a store and set its inventory
 store = Store()
 store.inventory = inventory
-
-print("Welcome what would you like to purchase?")
-print("If you need help please type store.help()")
+# Start the interface
+store.run_interface()
 
 
