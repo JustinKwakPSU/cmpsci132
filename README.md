@@ -1,6 +1,8 @@
 # cmpsci132
 for my cmpsci132 class
 
+# IMPORTANT
+I made this code in python IDLE so please use IDLE when using the code since visual studio does not support typing in the console like IDLE does.
 # Implemented Functionalities:
 1. Product Class
 * Represents individual products in the store.
