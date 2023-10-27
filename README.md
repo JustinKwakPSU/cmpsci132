@@ -1,7 +1,7 @@
 # cmpsci132
 for my cmpsci132 class
 
-## Implemented Functionalities:
+# Implemented Functionalities:
 1. Product Class
 * Represents individual products in the store.
 * Attributes: name, category, price, quantity in stock, and a unique product identifier.
@@ -26,7 +26,7 @@ Testing(Pictures will be attached seperately):
 
 Initializing the classes/assigning values to my classes: Nothing went wrong there since my code would not work otherwise
 
-## Testing all the methods in the Inventory/Product Class:
+# Testing all the methods in the Inventory/Product Class:
 
 Create products:
 product1 = Product(1, "Laptop", "Electronics", 999.99, 10)
@@ -61,7 +61,7 @@ inventory.get_product_info(1)
 inventory.get_product_info(2)
 inventory.get_product_info(3)
 
-Results:
+## Results:
 Successfully added this product!
 Successfully added this product!
 Initial Stock Levels:
@@ -78,10 +78,10 @@ Product Information: Laptop (Electronics) - 5 in stock
 Product Information: Desk Chair (Furniture) - 15 in stock
 Product Information: Smartphone (Electronics) - 30 in stock
 
-Note: 
+## Note: 
 Overall, it went according to plan. All the testing print statements went through, meaning the code went without any hiccups.
 
-## Testing all the methods in the Transaction/Store class:
+# Testing all the methods in the Transaction/Store class:
     
 Create products
 product1 = Product(1, "Laptop", "Electronics", 999.99, 10)
@@ -163,7 +163,7 @@ To generate a report, type store.generate_report().
 
 Note: Once again went without a hitch, the results is a lot longer than the previous one due to the help method having so many print statements.
 
-##Conclusion:
+## Conclusion:
 Overall, I am pretty proud on what I made here. I did run into some trouble when debugging my code, that will all be in the parenthesis below since I ended up fixing this problem. This took a lot of rime, blood, sweat, and energy drinks but I ended up doing a pretty good job if I do say so myself.
 
 (There is one hiccup in this code and it is that the get_product_info method will always print out every products info which is not inherently bad but I created the code thinking I was going to only pull up one of the items infos. Changing it now would require me to change my purchase_products method, which I do not want to do since that was the bulk of the coding.)
